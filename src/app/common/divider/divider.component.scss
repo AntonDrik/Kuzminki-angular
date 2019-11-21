@@ -1,0 +1,134 @@
+$standart-color: #8a244c;
+
+.divider {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-repeat: no-repeat;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    margin: 0;
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+.divider-main {
+  background-image: url('/assets/img/_src/main-img.jpg');
+  background-size: cover;
+  &__content {
+    max-width: 700px;
+    & span {
+      font-size: 40px;
+      margin-bottom: 20px;
+      font-family: 'lora-regular';
+    }
+    & p {
+      font-size: 20px;
+      margin-bottom: 90px;
+      line-height: 30px;
+      font-family: 'corbel-regular';
+    }
+  }
+}
+
+.divider-advantages {
+  background-color: $standart-color;
+
+  & * {
+    color: #ffffff;
+  }
+
+  &__cards {
+    justify-content: center;
+  }
+
+  &__card {
+    width: 270px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__dish {
+    &-wrapper {
+      width: 160px;
+      height: 160px;
+      margin-bottom: 50px;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url('/assets/img/_src/dish.png');
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.5s ease;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 0 1px 40px 0px #000;
+      }
+
+      &:before {
+        content: '';
+        width: 67px;
+        height: 67px;
+        background-image: url("/assets/img/_src/sprite.png");
+      }
+    }
+  }
+
+  &__text {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-family: 'corbel-regular';
+    font-size: 18px;
+    line-height: 30px;
+
+  }
+
+  &__img-1:before {
+    background-position: -6px 68px;
+  }
+  &__img-2:before {
+    background-position: -98px 68px;
+  }
+  &__img-3:before {
+    background-position: -189px 68px;
+  }
+  &__img-4:before {
+    background-position: -277px 68px;
+  }
+}
+
+.divider-catalog {
+  height: 500px;
+}
+
+@media (max-width: 992px) {
+  .divider-advantages__item {
+    padding-bottom: 40px;
+  }
+  .divider-catalog {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .divider {
+    padding: 30px 0;
+  }
+  .divider-catalog {
+    height: 300px;
+    background-size: cover;
+  }
+}

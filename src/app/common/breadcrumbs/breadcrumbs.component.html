@@ -1,0 +1,6 @@
+<div class="breadcrumbs" *ngIf="breadcrumbs.length">
+  <div class="container">
+    <a routerLink="" class="breadcrumbs__title">Главная</a>
+    <a routerLinkActive='active' [routerLink]="[breadcrumb.url]" class="breadcrumbs__title" *ngFor="let breadcrumb of breadcrumbs">{{ breadcrumb.label }}</a>
+  </div>
+</div>

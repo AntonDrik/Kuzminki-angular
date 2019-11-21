@@ -1,0 +1,13 @@
+<div class="card" [ngClass]="card.type+'-card'">
+  <a routerLink="/{{ (card.link) ? card.link : 'catalog' }}/{{ (card.productID) ? card.productID : '' }}">
+  <div class="card__img">
+      <img [src]="card.imagePath" alt="">
+  </div>
+  <div class="card__info">
+      <h3 *ngIf="card.title" [ngClass]="card.type+'-card__header'">{{ card.title }}</h3>
+      <span *ngIf="card.date" [ngClass]="card.type+'-card__date'">{{ card.date }}</span>
+      <p *ngIf="card.text" [ngClass]="card.type+'-card__text'">{{ card.text }}</p>
+      <button *ngIf="card.button" class="btn btn__standart">{{ card.button }}</button>
+  </div>
+  </a>
+</div>

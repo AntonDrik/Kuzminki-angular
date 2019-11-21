@@ -1,0 +1,48 @@
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-sm-12 header__logo">
+        <a href="index.html">
+          <img src="assets/img/_src/logo.png" alt="">
+        </a>
+      </div>
+      <div class="col-md-9 col-sm-12">
+        <div class="header__info">
+          <div class="header__info-contacts">
+            <div class="header__info-item">
+              <span class="header__address list__item-img">г. Москва, ул. Петровская, д. 135<br> корпус 13.</span>
+            </div>
+            <div class="header__info-item">
+              <span class="header__phone list__item-img">+7 916 123-45-67</span>
+              <span class="header__mail list__item-img">Mail@mail.ru</span>
+            </div>
+          </div>
+          <div class="header__info-item header__info-call-btn">
+            <button class="btn btn__standart" data-toggle="modal" data-target="#modal">заказать звонок</button>
+          </div>
+        </div>
+        <app-header-menu
+          [links]="[
+          {
+            caption: 'Главная',
+            link: ''
+          },
+          {
+            caption: 'Ассортимент',
+            link: 'catalog'
+          },
+          {
+            caption: 'Новости',
+            link: 'news'
+          },
+          {
+            caption: 'Сертификаты',
+            link: 'sertificats'
+          },
+          {
+            caption: 'Контакты',
+            link: 'contacts'
+          }
+        ]"></app-header-menu>
+      </div>
+    </div>
+  </div>

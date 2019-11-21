@@ -1,0 +1,17 @@
+<nav class="main-menu">
+  <div class="menu-mobile" (click)="toggleMenu(false)">
+    <button class="menu-mobile__bar">
+      <span class="menu-mobile__bar-1"></span>
+      <span class="menu-mobile__bar-2"></span>
+      <span class="menu-mobile__bar-3"></span>
+    </button>
+    <button class="btn btn__standart btn__menu-mobile" data-toggle="modal" data-target="#modal">заказать звонок</button>
+  </div>
+  <ul id="menu" class="menu" *ngIf="isVisible" [@slideInOut]>
+    <li class="menu__item" *ngFor="let item of links">
+      <a routerLink="{{item.link}}" routerLinkActive="active" class="menu__link">
+        <span>{{ item.caption }}</span>
+      </a>
+    </li>
+  </ul>
+</nav>

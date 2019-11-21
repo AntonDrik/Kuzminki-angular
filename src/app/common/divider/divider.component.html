@@ -1,0 +1,31 @@
+<section class="divider" [ngClass]="data.class">
+
+    <ng-container *ngIf="data.class === 'divider-main'">
+      <div class="container">
+        <div class="divider-main__content divider__content">
+          <span *ngIf="data.title" [innerHTML]="data.title"></span>
+          <p *ngIf="data.text" [innerHTML]="data.text"></p>
+          <button *ngIf="data.button" class="btn btn__standart">{{ data.button }}</button>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="data.class === 'divider-advantages'">
+      <div class="container">
+        <h1 class="title__big section-title">{{ data.title }}</h1>
+        <div class="grid divider-advantages__cards">
+          <div class="divider-advantages__item divider-advantages__card" *ngFor="let item of data.advantages; index as i">
+            <div class="divider-advantages__dish-wrapper" [ngClass]="'divider-advantages__img-'+(i+1)"></div>
+            <span class="divider-advantages__text">{{ item }}</span>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+  <ng-container *ngIf="data.class === 'divider-catalog'">
+    <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="data.slideConfig">
+      <img ngxSlickItem [src]="imagePath" alt="" *ngFor="let imagePath of data.imagePath">
+    </ngx-slick-carousel>
+  </ng-container>
+
+</section>

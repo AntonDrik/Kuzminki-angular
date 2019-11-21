@@ -1,0 +1,48 @@
+<ng-container *ngIf="!ProductID">
+
+  <divider [data] = divider></divider>
+
+  <section class="catalog section-padding">
+    <div class="container">
+      <div class="slider-header">
+        <button class="prev-arrow btn btn__white" (click)="slickModal.slickPrev()">Назад</button>
+        <div class="catalog-slider__title">
+          <ngx-slick-carousel class="carousel carousel__title"
+                              #slickModal="slick-carousel"
+                              [config]="titleSlideConfig">
+            <h1 class="title__big section-title catalog-title" ngxSlickItem *ngFor="let slide of products">{{ slide.title }}</h1>
+          </ngx-slick-carousel>
+        </div>
+        <button class="next-arrow btn btn__white" (click)="slickModal.slickNext()">Вперед</button>
+      </div>
+      <div class="catalog-slider">
+        <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+          <div class="catalog-category" ngxSlickItem *ngFor="let slide of products">
+            <card *ngFor="let card of slide.cards" [card]="card"></card>
+          </div>
+        </ngx-slick-carousel>
+      </div>
+      <button class="btn btn__standart btn__show-more" (click)="loadMore()">загрузить ещё</button>
+    </div>
+  </section>
+
+  <section class="catalog-describe section-padding">
+    <div class="container">
+      <h1 class="title__big section-title">Заголовок</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam commodi ducimus est exercitationem nobis optio provident
+        quas, reiciendis temporibus. Culpa cumque dolore ipsam nesciunt tenetur!
+      </p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ex labore omnis quas quisquam reprehenderit.</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dolor ducimus esse exercitationem illo illum iure, magnam mollitia
+        neque nisi nostrum nulla, officia, quia quisquam quo rem sequi sint tenetur.
+      </p>
+    </div>
+  </section>
+
+</ng-container>
+
+<router-outlet></router-outlet>
+
+

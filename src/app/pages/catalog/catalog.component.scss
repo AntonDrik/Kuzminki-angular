@@ -1,0 +1,71 @@
+.catalog {
+  &-title {
+    margin: 0;
+    outline: none;
+    padding: 0 10px;
+  }
+
+  &-slider {
+    padding-top: 80px;
+    padding-bottom: 40px;
+    &__title {
+      width: 59%;
+    }
+  }
+
+  &-category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    outline: none;
+  }
+}
+
+.slider-header {
+  display: flex;
+  align-items: center;
+}
+
+::ng-deep.slick-track {
+  display: flex;
+  align-items: center;
+}
+
+.slick-track .slick-slide {
+  display: flex;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .catalog-category {
+    justify-content: center;
+  }
+  .catalog-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .slider-header {
+    position: relative;
+
+    & .catalog-slider__title {
+      margin-bottom: 50px;
+      width: 100%;
+    }
+  }
+  .prev-arrow,
+  .next-arrow {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+  }
+  .prev-arrow {
+    left: 0;
+  }
+  .next-arrow {
+    right: 0;
+  }
+}

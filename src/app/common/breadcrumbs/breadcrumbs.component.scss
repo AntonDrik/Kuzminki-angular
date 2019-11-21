@@ -1,0 +1,27 @@
+$standart-color: #8a244c;
+.breadcrumbs {
+  display: flex;
+  padding: 20px 0;
+  & a {
+    font-family: 'corbel-regular';
+    &:not(:last-child) {
+      padding-right: 15px;
+      &:after {
+        content: '•';
+        padding: 0 5px;
+        position: absolute;
+      }
+    }
+    &:last-child {
+      color: black;
+      cursor: initial;
+      &:hover {
+        text-decoration: none;
+        color: initial;
+      }
+    }
+  }
+  &__title {
+    color: $standart-color;
+  }
+}

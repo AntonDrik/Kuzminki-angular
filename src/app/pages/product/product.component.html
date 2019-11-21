@@ -1,0 +1,89 @@
+<section class="product-img">
+  <div class="container">
+    <div class="product-img__content">
+      <img [src]="product.imagePath" alt="">
+    </div>
+    <a class="btn btn__white product-img__btn" routerLink="/catalog">Вернуться назад</a>
+  </div>
+</section>
+
+<section class="product-describe section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-md-12">
+        <div class="row">
+          <div class="col-lg-12 col-md-6" style="padding-bottom: 45px">
+            <div class="card product-describe__card product-describe__comp">
+              <h2 class="title__big product-describe__title">Состав</h2>
+              <p class="product-describe__text">
+                Свинина, говядина, вода, меланж яичный, соль нитритная, молоко сухое
+                обезжиренное, мускатный орех, черный перец, сахар.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-6">
+            <div class="card product-describe__card product-describe__comp">
+              <h2 class="title__big product-describe__title">Пищевая ценность</h2>
+              <table>
+                <tr>
+                  <th>на 100г продукта</th>
+                  <th>% от нормы (м/ж)</th>
+                </tr>
+                <tr>
+                  <td>Белки - не менее 12г</td>
+                  <td>10%/13%</td>
+                </tr>
+                <tr>
+                  <td>Жиры - не более 20г</td>
+                  <td>33%/38%</td>
+                </tr>
+                <tr>
+                  <td>196кКал/814кДж</td>
+                  <td>8%/11%</td>
+                </tr>
+              </table>
+              <div class="product-describe__notification">*Основано на диете в 2000 калорий/день</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-12">
+        <h2 class="title__big product-describe__title">Рулька Питерская копчено-вареная</h2>
+        <p class="product-describe__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Beatae cumque cupiditate expedita inventore itaque nam natus nulla obcaecati odit quia sed, similique
+          temporibus ullam ut?
+        </p>
+        <p class="product-describe__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid debitis, doloribus ducimus itaque
+          natus odio optio placeat quidem repellendus sed sequi vero vitae voluptates?
+        </p>
+        <p class="product-describe__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore eum facilis fugit harum magni natus officiis
+          possimus tempora. Ab aliquam consectetur doloribus ducimus eum illum impedit iusto magnam minus obcaecati
+          perferendis quas qui quo quos sapiente similique tempora, tenetur velit. Beatae consequatur doloribus nam
+          quibusdam, sed veritatis voluptates voluptatum. Quasi?
+        </p>
+        <p class="product-describe__text">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. At facere ipsam laboriosam obcaecati officia tempore?
+        </p>
+        <div class="product-describe__sertificat list__item-img">
+          <a href="file.pdf" download="">
+            <span>Сертификат соответствия</span>
+            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam debitis, quaerat.</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="product-another section-padding">
+  <div class="container">
+    <h1 class="title__big section-title">Похожие продукты</h1>
+    <div class="catalog-slider">
+      <div class="catalog-category">
+        <card *ngFor="let card of anotherProducts.cards" [card]="card"></card>
+      </div>
+    </div>
+  </div>
+</section>

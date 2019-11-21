@@ -1,0 +1,9 @@
+<section class="main-articles section-padding">
+  <div class="container">
+    <h1 class="title__big section-title">Новости</h1>
+    <div class="articles-cards grid">
+      <card *ngFor="let article of currArticles" [card]="article"></card>
+    </div>
+    <ngb-pagination [collectionSize]="articlesSize" [(page)]="page" (pageChange)="getArticles($event)" [maxSize]="4" [rotate]="true" aria-label="Default pagination"></ngb-pagination>
+  </div>
+</section>

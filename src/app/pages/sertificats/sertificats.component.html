@@ -1,0 +1,24 @@
+<section class="sertificats section-padding__first">
+  <div class="container">
+    <h1 class="title__big section-title">Сертификаты</h1>
+    <div class="sertificats__search">
+      <input type="text" placeholder="Поиск по документам">
+      <button class="sertificats__search-img btn btn__standart"></button>
+    </div>
+
+    <div class="sertificats-cards grid">
+
+        <div class="card sertificats-card" *ngFor="let sertificat of sertificats">
+          <a [href]="sertificat.file" download="">
+            <img [src]="sertificat.imgSource" alt="">
+          </a>
+          <div class="card__info">
+            <a [href]="sertificat.file" download="">
+              <h5 class="sertificats-card__title">{{ sertificat.title }}</h5>
+            </a>
+          </div>
+        </div>
+
+    </div>
+  </div>
+</section>

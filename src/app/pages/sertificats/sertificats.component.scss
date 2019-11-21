@@ -1,0 +1,63 @@
+$standart-color: #8a244c;
+.sertificats {
+
+  &-cards {
+    justify-content: space-around;
+    margin: 0 -15px;
+  }
+  &-card {
+    max-width: 270px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+
+    &__title {
+      font-family: 'corbel-regular';
+      font-size: 16px;
+      color: #131d28;
+      text-align: center;
+    }
+
+    & .card__info {
+      padding-top: 5px;
+    }
+  }
+  &__search {
+    max-width: 540px;
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid $standart-color;
+    position: relative;
+    margin-bottom: 70px;
+
+    & input {
+      border: none;
+      background-color: transparent;
+      position: relative;
+      outline: none;
+      width: 100%;
+      height: 100%;
+      padding: 0 50px 0 20px;
+    }
+    &-img {
+      width: 40px !important;
+      height: 40px !important;
+      background-color: $standart-color;
+      position: absolute;
+      right: 0;
+      top:50%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:before {
+        content: '';
+        background-image: url('/assets/img/_src/sprite.png');
+        background-position: -77px -4px;
+        width: 25px;
+        height: 25px;
+      }
+    }
+  }
+
+}

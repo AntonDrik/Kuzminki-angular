@@ -28,9 +28,18 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/libs/bootstrap/scss/bootstrap-grid.scss",
+              "src/assets/libs/bootstrap/scss/bootstrap-reboot.scss",
+              "node_modules/slick-carousel/slick/slick.scss",
+              "node_modules/slick-carousel/slick/slick-theme.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/libs/jquery/dist/jquery.min.js",
+              "src/assets/libs/bootstrap/js/bootstrap.min.js",
+              "node_modules/slick-carousel/slick/slick.min.js",
+              "src/custom.js"
+            ]
           },
           "configurations": {
             "production": {
